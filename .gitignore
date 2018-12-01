@@ -1,7 +1,7 @@
 *.class
 *.iml
 .idea
-.properties
+*.properties
 target
 
 # Mobile Tools for Java (J2ME)
