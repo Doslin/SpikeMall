@@ -7,14 +7,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form action="add" method="post">
-	用户姓名:<input name="name"></br>
+${error }
+<form action="/Msproject/userregiterloginAction/login" method="post">
 	用户账号:<input name="useraccount"></br>
 	用户密码:<input name="userpassword"></br>
-	用户性别:<input name="usersex"></br>
-	用户年龄:<input name="userage"></br>
-	用户的地址:<input name="useraddress"></br>
-	用户的邮箱:<input name="useremail"></br>
 	<input type="button" value="提交" onclick="submit(this)">
 </form>
 </body>

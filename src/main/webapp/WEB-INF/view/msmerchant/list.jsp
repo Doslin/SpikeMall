@@ -8,13 +8,26 @@
 <title>Insert title here</title>
 </head>
 <body>
-<c:forEach items="${msmerchantlist }" var="item">
-	商家的姓名:${item.merchantname },
-	商家的店铺名称:${item.merchantshopname },
-	商家账号:${item.merchantaccount },
-	商家密码:${item.merchantpassword },
-	商家经营范围:${item.merchantscope },</br>
-
-</c:forEach>
+<center><a href="toadd">添加商家</a></center>
+<table border="2">
+	<tr>
+		<td>商家的姓名</td>
+		<td>商家的店铺名称</td>
+		<td>商家账号</td>
+		<td>商家密码</td>
+		<td>商家经营范围</td>
+		<td>操作</td>
+	</tr>
+	<c:forEach items="${msmerchantlist}" var="item">
+		<tr>
+			<td>${item.merchantname }</td>
+			<td>${item.merchantshopname }</td>
+			<td>${item.merchantaccount }</td>
+			<td>${item.merchantpassword }</td>
+			<td>${item.merchantscope }</td>
+			<td><a href="toupdate?id=${item.id}">修改</a>||<a href="del?id=${item.id}">删除</a>||<a href="querybyid?id=${item.id}">查看</a></td>
+		</tr>
+	</c:forEach>
+</table>
 </body>
 </html>

@@ -16,6 +16,16 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         <!-- 秒杀用户 -->
         <typeAlias type="com.doude.enity.Msuser" alias="msuser" />
         <typeAlias type="com.doude.vo.msuser.MsuserVo" alias="msuserVo" />
+        <!-- 秒杀商品-->
+        <typeAlias type="com.doude.enity.Msproductinfo" alias="msproductinfo" />
+        <typeAlias type="com.doude.vo.msproductinfo.MsProductVo" alias="msProductVo" />
+
+        <!-- 秒杀商品详情-->
+        <typeAlias type="com.doude.enity.Msproductdetail" alias="msproductdetail" />
+
+        <!-- 秒杀订单-->
+        <typeAlias type="com.doude.enity.Msorder" alias="msorder" />
+        <typeAlias type="com.doude.vo.order.MsorderVo" alias="msorderVo" />
     </typeAliases>
      
 </configuration>

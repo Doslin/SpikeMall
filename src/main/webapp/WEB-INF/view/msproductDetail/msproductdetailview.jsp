@@ -7,15 +7,13 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form action="add" method="post">
-	用户姓名:<input name="name"></br>
-	用户账号:<input name="useraccount"></br>
-	用户密码:<input name="userpassword"></br>
-	用户性别:<input name="usersex"></br>
-	用户年龄:<input name="userage"></br>
-	用户的地址:<input name="useraddress"></br>
-	用户的邮箱:<input name="useremail"></br>
-	<input type="button" value="提交" onclick="submit(this)">
+<form >
+	商品产地:${msproductdetail.productplace }</br>
+	商品名称:${msproductdetail.productname }</br>
+	商品品牌:${msproductdetail.brandname }</br>
+	商品重量:${msproductdetail.productweight }</br>
+	规格和包装:${msproductdetail.specification }</br>
+	商品详情图片地址:${msproductdetail.productdetailpicture }</br>
 </form>
 </body>
 <script type="text/javascript">

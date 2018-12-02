@@ -4,17 +4,13 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 
+import com.doude.service.MsUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.doude.enity.Msmerchant;
 import com.doude.enity.Msuser;
-import com.doude.service.MsUserService;
-import com.doude.service.MsmerchantService;
-import com.doude.vo.msmerchant.MsmerchantVo;
 import com.doude.vo.msuser.MsuserVo;
 
 @Controller
@@ -46,8 +42,13 @@ public class MsUserAction {
 	
 	@RequestMapping(value="update",method=RequestMethod.POST)
 	public String update(HttpServletRequest request,Msuser msuser){
-		msUserService.updateMsuser(msuser);
-		System.out.println(msuser);
+		try{
+			msUserService.updateMsuser(msuser);
+			System.out.println(msuser);
+		}catch (Exception e){
+			e.printStackTrace();
+		}
+
 		return "redirect:querybyvo";
 	}
 	

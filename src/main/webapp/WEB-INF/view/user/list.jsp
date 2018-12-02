@@ -8,14 +8,30 @@
 <title>Insert title here</title>
 </head>
 <body>
-<c:forEach items="${msuserlist }" var="item">
-	用户姓名:${item.name },
-	用户账号:${item.useraccount },
-	用户密码 :${item.userpassword },
-	用户性别:${item.usersex },
-	用户年龄:${item.userage },
-	用户的地址:${item.useraddress },
-	用户的邮箱:${item.useremail },</br>
-</c:forEach>
+<center><a href="toadd">添加用户</a></center>
+<table border="2">
+<tr>
+		<td>用户姓名</td>
+		<td>用户账号</td>
+		<td>用户密码</td>
+		<td>用户性别</td>
+		<td>用户年龄</td>
+		<td>用户的地址</td>
+		<td>用户的邮箱</td>
+		<td>操作</td>
+	</tr>
+	<c:forEach items="${msuserlist}" var="item">
+		<tr>
+			<td>${item.name }</td>
+			<td>${item.useraccount }</td>
+			<td>${item.userpassword }</td>
+			<td>${item.usersex }</td>
+			<td>${item.userage }</td>
+			<td>${item.useraddress }</td>
+			<td>${item.useremail }</td>
+			<td><a href="toupdate?id=${item.id}">修改</a>||<a href="del?id=${item.id}">删除</a>||<a href="querybyid?id=${item.id}">查看</a></td>
+		</tr>
+	</c:forEach>
+</table>
 </body>
 </html>

@@ -1,19 +1,19 @@
 package com.doude.enity;
 
 /**
- * ��ɱ�û�
+ *
  * @author Administrator
  *
  */
 public class Msuser {
 	private int id;//����
-	private String name;//�û�����
-	private String useraccount;//�û��˺�
-	private String userpassword;//�û�����
-	private int usersex;//�û��Ա�
-	private int userage;//�û�����
-	private String useraddress;//�û���ַ
-	private String useremail;//�û�������
+	private String name;//用户姓名
+	private String useraccount;//用户账号
+	private String userpassword;//用户密码
+	private int usersex;//用户性别
+	private int userage;//用户年龄
+	private String useraddress;//用户地址
+	private String useremail;//用户邮箱
 	
 	public int getId() {
 		return id;

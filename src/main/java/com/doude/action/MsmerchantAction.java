@@ -44,7 +44,7 @@ public class MsmerchantAction {
 		msmerchantService.updateMsmerchant(msmerchant);
 		return "redirect:querybyvo";
 	}
-	
+
 	@RequestMapping("del")
 	public String del(HttpServletRequest request,int id){
 		msmerchantService.deleteMsmerchantbyid(id);
@@ -58,7 +58,7 @@ public class MsmerchantAction {
 		return "msmerchant/view";
 	}
 	
-	@RequestMapping("querybyvo")
+	@RequestMapping(value = "querybyvo")
 	public String querybyvo(HttpServletRequest request,MsmerchantVo msmerchantVo){
 		List<Msmerchant> list = msmerchantService.queryMsmerchantbyvo(msmerchantVo);
 		request.setAttribute("msmerchantlist", list);

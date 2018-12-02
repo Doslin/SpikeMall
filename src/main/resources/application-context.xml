@@ -39,7 +39,11 @@
             <array>
                 <value>classpath:com/doude/dao/xml/MsmerchantDao.xml</value>
                 <value>classpath:com/doude/dao/xml/test/PersonDao.xml</value>
+                <value>classpath:com/doude/dao/xml/MsmerchantDao.xml</value>
                 <value>classpath:com/doude/dao/xml/MsUserDao.xml</value>
+                <value>classpath:com/doude/dao/xml/MsproductDao.xml</value>
+                <value>classpath:com/doude/dao/xml/MsproducDetailtDao.xml</value>
+                <value>classpath:com/doude/dao/xml/MsOrderDao.xml</value>
             </array>
         </property>
 

@@ -2,14 +2,11 @@ package com.doude.service;
 
 import java.util.List;
 
+import com.doude.dao.MsuserDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.doude.dao.MsmerchantDao;
-import com.doude.dao.MsuserDao;
-import com.doude.enity.Msmerchant;
 import com.doude.enity.Msuser;
-import com.doude.vo.msmerchant.MsmerchantVo;
 import com.doude.vo.msuser.MsuserVo;
 
 @Service
@@ -36,5 +33,8 @@ public class MsUserService {
 		return msuserDao.queryMsuserbyvo(msuserVo);
 	}
 	
+	public Msuser queryMsuserByuseraccount(String useraccount){
+		return msuserDao.queryMsuserByuseraccount(useraccount);
+	}
 	
 }
