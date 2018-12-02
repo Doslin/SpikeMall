@@ -28,8 +28,11 @@ public class MsmerchantService {
 	public void deleteMsmerchantbyid(int id){
 		msmerchantDao.deleteMsmerchantbyid(id);
 	};
-	
 	public List<Msmerchant> queryMsmerchantbyvo(MsmerchantVo msmerchantVo){
 		return msmerchantDao.queryMsmerchantbyvo(msmerchantVo);
 	}
+	public Msmerchant queryMsmerchantByaccount(String account){
+		return msmerchantDao.queryMsmerchantByaccount(account);
+	}
+
 }

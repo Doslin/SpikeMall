@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form action="/Msproject/orderAction/topayorder">
+<form action="../orderAction/topayorder">
 购买数量：<input type="text" name="num" >
 <input type="hidden" name="id" value="${msproduct.id}">
 <table border="1">

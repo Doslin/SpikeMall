@@ -8,9 +8,9 @@
 </head>
 <body>
 欢迎商家：${msmerchant.merchantaccount}
-<a href="/Msproject/msmerchantReloginAction/toregiter">商家注册</a></br>
-<a href="/Msproject/msmerchantReloginAction/tologin">商家登录</a>
-<a href="/Msproject/msmerchantReloginAction/exit">商家退出登录</a>
-<a href="/Msproject/orderAction/queryorderbyMsmerchanid">订单查询</a>
+<a href="../msmerchantReloginAction/toregiter">商家注册</a></br>
+<a href="../msmerchantReloginAction/tologin">商家登录</a>
+<a href="../msmerchantReloginAction/exit">商家退出登录</a>
+<a href="../orderAction/queryorderbyMsmerchanid">订单查询</a>
 </body>
 </html>

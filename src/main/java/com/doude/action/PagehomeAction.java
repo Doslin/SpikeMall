@@ -42,8 +42,8 @@ public class PagehomeAction {
 		constomProduct.setStartendtime(nowstring);
 		constomProduct.setAuditstate(2);
 		msProductVo.setConstomProduct(constomProduct);
-//		private Date startstarttime;//��ɱ��ʼʱ���ѯ��Χ��ʼʱ��
-//		private Date endstarttime;//��ɱ��ʼʱ���ѯ��Χ����ʱ��
+//		private Date startstarttime;//
+//		private Date endstarttime;//
 		msProductVo.setConstomProduct(constomProduct);
 		List<Msproductinfo> list = msproductService.listmsproduct(msProductVo);
 		req.setAttribute("list", list);

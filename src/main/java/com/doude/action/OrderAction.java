@@ -42,7 +42,7 @@ public class OrderAction {
 	ZhifubaoPay zhifubaoPay;
 	
 	
-  @RequestMapping("payorder")
+  @RequestMapping(value = "payorder",method = RequestMethod.POST)
   public String payorder(Msorder msorder){
 	  Date now = new Date();
 	  msorder.setCreatetime(now);
@@ -68,7 +68,7 @@ public class OrderAction {
 	  if(msuser != null ){
 		  req.setAttribute("msuserid", msuser.getId());
 	  }else{
-		  req.setAttribute("error", "δ��¼");
+		  req.setAttribute("error", "错误");
 		  return "user/tologin";
 	  }
 	  return "order/payorder";
@@ -84,7 +84,7 @@ public class OrderAction {
 		  List<Msorder> list = msoderService.queryorderbyuserid(msuser.getId());
 		  req.setAttribute("list", list);
 	  }else{
-		  req.setAttribute("error", "δ��½");
+		  req.setAttribute("error", "错误");
 		  returnurl = "user/tologin";
 	  }
 	 
@@ -102,22 +102,22 @@ public class OrderAction {
 		  List<Msorder> list = msoderService.queryorderbymerchantid(msmerchant.getId());
 		  req.setAttribute("list", list);
 	  }else{
-		  req.setAttribute("error", "δ��½");
+		  req.setAttribute("error", "未登录");
 		  returnurl = "msmerchant/tologin";
 	  }
 	 
 	  return returnurl;
 	  
   }
-  
-  /**
-   * ��ת��֧��ҳ��
-   * @param req
-   * @param paytype 1����֧����  2����΢��  3��������
-   * @param tradeserialnumber
-   * @param payamount
-   * @return
-   */
+
+	/**
+	 *
+	 * @param req
+	 * @param id
+	 * @param tradeserialnumber
+	 * @param payamount
+	 * @return
+	 */
   @RequestMapping("topaywithorder")
   public String topaywithorder(HttpServletRequest req,int id,String tradeserialnumber, int payamount){
 	  req.setAttribute("id", id);
@@ -126,23 +126,24 @@ public class OrderAction {
 	  return "order/payreal";
 	  
   }
- 
-  /**
-   * 
-   * @param req
-   * @param paytype 1����֧����  2����΢��  3��������
-   * @param tradeserialnumber
-   * @param payamount
-   * @return
-   */
+
+	/**
+	 *
+	 * @param req
+	 * @param paytype   1、代表支付宝 2、代表微信  3、 代表银联
+	 * @param id
+	 * @param tradeserialnumber
+	 * @param payamount
+	 * @return
+	 */
   @RequestMapping(value="paywithorder",method=RequestMethod.POST)
   public String paywithorder(HttpServletRequest req,int paytype,int id,String tradeserialnumber, int payamount){
 	  int paystatus = 2;
-	  if(paytype == 1){//1����֧����
+	  if(paytype == 1){//1支付宝支付
 		  paystatus = zhifubaoPay.paywithorder(tradeserialnumber, payamount);
-	  }else if(paytype == 2){//2����΢��
+	  }else if(paytype == 2){//2微信
 		  paystatus = weixinPay.paywithorder(tradeserialnumber, payamount);
-	  }else if(paytype == 3){//3�Ǵ�������
+	  }else if(paytype == 3){//3银联
 		  paystatus = yinghangkapay.paywithorder(tradeserialnumber, payamount);
 	  }
 	  if(paystatus == 1){
@@ -161,7 +162,7 @@ public class OrderAction {
 	  if(msuser!=null){
 		  msoderService.updateorderpaystatusbyid(4, orderid, paytype);
 	  }else{
-		  req.setAttribute("error", "δ��½");
+		  req.setAttribute("error", "退款失败");
 		  returnurl = "user/tologin";
 	  }
 	  
@@ -177,11 +178,11 @@ public class OrderAction {
 	  if(msmerchant!=null){
 		  if(paystatus == 3){
 			  int paystatustemp = 2;
-			  if(paytype == 1){//1����֧����
+			  if(paytype == 1){//1 支付宝
 				  paystatustemp = zhifubaoPay.refundwithorder(tradeserialnumber, payamount);
-			  }else if(paytype == 2){//2����΢��
+			  }else if(paytype == 2){//2 微信
 				  paystatustemp = weixinPay.refundwithorder(tradeserialnumber, payamount);
-			  }else if(paytype == 3){//3�Ǵ�������
+			  }else if(paytype == 3){//3 银联
 				  paystatustemp = yinghangkapay.refundwithorder(tradeserialnumber, payamount);
 			  }
 			  if(paystatustemp == 1){
@@ -192,7 +193,7 @@ public class OrderAction {
 			  msoderService.updateorderpaystatusbyid(paystatus, orderid, paytype);
 		  }
 	  }else{
-		  req.setAttribute("error", "δ��½");
+		  req.setAttribute("error", "失败");
 		  returnurl = "msmerchant/tologin";
 	  }
 	  

@@ -7,31 +7,29 @@ import com.doude.enity.Msproductinfo;
 import com.doude.enity.Msuser;
 
 public class ConstomProduct  extends  Msproductinfo{
-	private int startmiaoshaprice;//��ɱ�۸��ѯ��Χ��ʼ
-	private int endmiaoshaprice;//��ɱ�۸��ѯ��Χ����
+	private int startmiaoshaprice;//秒杀价格查询起始范围
+	private int endmiaoshaprice;//秒杀价格查询截止范围
 	
-	private int startoriginalprice;//��Ʒԭ�۲�ѯ��Χ��ʼ
-	private int endoriginalprice;//��Ʒԭ�۲�ѯ��Χ����
+	private int startoriginalprice;//商品原价查询起始范围
+	private int endoriginalprice;//商品原价查询截止范围
 	
-	private String startapplydate;//����ʱ���ѯ��Χ��ʼʱ��
-	private String endapplydate;//����ʱ���ѯ��Χ����ʱ��
+	private String startapplydate;//申请时间查询起始范围
+	private String endapplydate;//申请时间查询截止范围
 	
-	private String startauditdate;//���ʱ���ѯ��Χ��ʼʱ��
-	private String endauditdate;//���ʱ���ѯ��Χ����ʱ��
+	private String startauditdate;//审核时间查询起始范围
+	private String endauditdate;//审核时间查询截止范围
 	
-	private String startstarttime;//��ɱ��ʼʱ���ѯ��Χ��ʼʱ��
-	private String endstarttime;//��ɱ��ʼʱ���ѯ��Χ����ʱ��
+	private String startstarttime;//秒杀开始时间起始范围
+	private String endstarttime;//秒杀开始时间结束范围
 	
-	private String startendtime;//��ɱ����ʱ���ѯ��Χ��ʼʱ��
+	private String startendtime;//秒杀结束时间起始范围
+	private String endendtime;//秒杀结束时间起始范围
 	
+	private int startproductcount;//秒杀开始数量
+	private int endproductcount;//秒杀结束数量
 	
-	private String endendtime;//��ɱ����ʱ���ѯ��Χ����ʱ��
-	
-	private int startproductcount;//��ɱ��Ʒ����ʼ��Χ
-	private int endproductcount;//��ɱ��Ʒ��������Χ
-	
-	private int startstockcount;//��濪ʼ��Χ
-	private int endstockcount;//��������Χ
+	private int startstockcount;//秒杀开始库存
+	private int endstockcount;//秒杀结束库存
 	
 	public int getStartmiaoshaprice() {
 		return startmiaoshaprice;

@@ -7,10 +7,12 @@
 <title>Insert title here</title>
 </head>
 <body>
-${error }
-<form action="../userregiterloginAction/login" method="post">
-	用户账号:<input name="useraccount"></br>
-	用户密码:<input name="userpassword"></br>
+<form action="regiter" method="post">
+	商家的姓名:<input name="merchantname"></br>
+	商家的店铺名称:<input name="merchantshopname"></br>
+	商家账号:<input name="merchantaccount"></br>
+	商家密码:<input name="merchantpassword"></br>
+	商家经营范围:<input name="merchantscope"></br>
 	<input type="button" value="提交" onclick="submit(this)">
 </form>
 </body>

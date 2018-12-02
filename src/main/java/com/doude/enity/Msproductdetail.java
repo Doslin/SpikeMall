@@ -6,6 +6,11 @@ package com.doude.enity;
  *
  */
 public class Msproductdetail {
+
+
+
+
+
 	private int id;//
 	private int productid;//
 	private int merchantid;//

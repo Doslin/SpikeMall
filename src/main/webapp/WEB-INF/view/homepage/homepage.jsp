@@ -9,10 +9,10 @@
 </head>
 <body>
 欢迎：${msuser.useraccount}
-<a href="/Msproject/userregiterloginAction/toregiter">注册</a></br>
-<a href="/Msproject/userregiterloginAction/tologin">登录</a>
-<a href="/Msproject/userregiterloginAction/exit">退出登录</a>
-<a href="/Msproject/orderAction/queryorderbyuserid">订单查询</a>
+<a href="../userregiterloginAction/toregiter">注册</a></br>
+<a href="../userregiterloginAction/tologin">登录</a>
+<a href="../userregiterloginAction/exit">退出登录</a>
+<a href="../orderAction/queryorderbyuserid">订单查询</a>
 <table border="2">
 	<c:forEach items="${list}" var="item">
 		<tr>

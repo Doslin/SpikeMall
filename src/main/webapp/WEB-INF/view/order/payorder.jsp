@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form action="payorder">
+<form action="payorder" method="post">
 商品名称：${msproductinfo.producttitle}
 购买数量：${productnum}
 支付总额：${payamount}

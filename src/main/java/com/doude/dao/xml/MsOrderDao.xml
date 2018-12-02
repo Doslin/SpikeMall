@@ -10,20 +10,24 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		<selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
 			SELECT LAST_INSERT_ID()
 		</selectKey>
-		insert into msorder(productid,payamount,userid,merchantid,createtime,paystatus,receivingadress,receivingphone,receivingname,tradeserialnumber,num) value(#{productid},#{payamount},#{userid},#{merchantid},#{createtime},#{paystatus},#{receivingadress},#{receivingphone},#{receivingname},#{tradeserialnumber},#{num})
+		insert into SpikeOrder(productid,payamount,userid,merchantid,createtime,paystatus,receivingadress,receivingphone,receivingname,tradeserialnumber,num) value(#{productid},#{payamount},#{userid},#{merchantid},#{createtime},#{paystatus},#{receivingadress},#{receivingphone},#{receivingname},#{tradeserialnumber},#{num})
 	</insert>
+
+
+
+
 	
 	<select id="queryorderbyuserid" parameterType="int" resultType="msorder">
-		select * from msorder where userid = #{value}
+		select * from SpikeOrder where userid = #{value}
 	</select>
 	
 	<select id="queryorderbymerchantid" parameterType="int" resultType="msorder">
-		select * from msorder where merchantid = #{value}
+		select * from SpikeOrder where merchantid = #{value}
 	</select>
 	
 	
 	<update id="updateorderpaystatusbyid" parameterType="msorderVo">
-		update msorder set paystatus=#{constomOrder.paystatus},paytype=#{constomOrder.paytype} where id=#{constomOrder.id}
+		update SpikeOrder set paystatus=#{constomOrder.paystatus},paytype=#{constomOrder.paytype} where id=#{constomOrder.id}
 	</update>
 	
 </mapper>

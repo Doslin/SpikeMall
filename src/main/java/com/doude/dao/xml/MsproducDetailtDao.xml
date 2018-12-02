@@ -10,15 +10,15 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		<selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
 			SELECT LAST_INSERT_ID()
 		</selectKey>
-		insert into msproductdetail(productid,merchantid,productplace,productname,brandname,productweight,specification,productdetailpicture) value(#{productid},#{merchantid},#{productplace},#{productname},#{brandname},#{productweight},#{specification},#{productdetailpicture})
+		insert into SpikeProductDetail(productid,merchantid,productplace,productname,brandname,productweight,specification,productdetailpicture) value(#{productid},#{merchantid},#{productplace},#{productname},#{brandname},#{productweight},#{specification},#{productdetailpicture})
 	</insert>
 	
 	<select id="queryMsproductdetailByid" parameterType="int" resultType="msproductdetail">
-		select * from msproductdetail where productid = #{value}
+		select * from SpikeProductDetail where productid = #{value}
 	</select>
 	
 	<update id="updateMsproductdetail" parameterType="msproductdetail">
-		update msproductdetail set productplace=#{productplace},productname=#{productname},brandname=#{brandname},productweight=#{productweight},specification=#{specification},productdetailpicture=#{productdetailpicture} where productid=#{productid}
+		update SpikeProductDetail set productplace=#{productplace},productname=#{productname},brandname=#{brandname},productweight=#{productweight},specification=#{specification},productdetailpicture=#{productdetailpicture} where productid=#{productid}
 	</update>
 	
 </mapper>

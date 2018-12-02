@@ -48,15 +48,13 @@ public class MsmerchantReloginAction {
 		String returnurl = "adminpagehome/error";
 		String account = msuser.getUseraccount();
 		String password = msuser.getUserpassword();
-		Msmerchant msmerchant =null;
-
-//				msmerchantService.queryMsmerchantByaccount(account);
+		Msmerchant msmerchant = msmerchantService.queryMsmerchantByaccount(account);
 		if(msmerchant == null ){
-			System.out.println("�޴��̼�");
-			req.setAttribute("errorinfo", "�޴��̼�");
+			System.out.println("无此商家");
+			req.setAttribute("errorinfo", "无此商家");
 		}else if(!msmerchant.getMerchantpassword().equals(password)){
-			System.out.println("�̼��������");
-			req.setAttribute("errorinfo", "�̼��������");
+			System.out.println("密码错误");
+			req.setAttribute("errorinfo", "密码错误");
 		}else{
 			HttpSession sess = req.getSession();
 			sess.setAttribute("msmerchant", msmerchant);

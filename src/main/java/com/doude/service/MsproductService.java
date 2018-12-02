@@ -31,6 +31,7 @@ public class MsproductService {
 		try {
 			Date starttimedate = dateformat.parse(starttime);
 			msproductinfo.setStarttime(starttimedate);
+
 			Date endtimedate = dateformat.parse(endtime);
 			msproductinfo.setEndtime(endtimedate);
 		} catch (ParseException e) {
@@ -43,7 +44,7 @@ public class MsproductService {
 	}
 	
 	/**
-	 * ��ɱ��Ʒ�б�
+	 *
 	 * @param msproductinfo
 	 */
 	public List<Msproductinfo> listmsproduct(MsProductVo msProductVo){
@@ -51,8 +52,8 @@ public class MsproductService {
 	}
 	
 	/**
-	 * ������ɱ��Ʒid��ѯ��ɱ��Ʒ
-	 * @param msproductinfo
+	 *
+	 * 	 * @param msproductinfo
 	 */
 	public Msproductinfo querymsproductByid(int id){
 		return msproductDao.querymsproductByid(id);

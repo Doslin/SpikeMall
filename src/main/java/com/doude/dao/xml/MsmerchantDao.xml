@@ -50,5 +50,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 			<include refid="consutomsql"></include>
 		</where>
 	</select>
-	
+	<select id="queryMsmerchantByaccount" parameterType="java.lang.String" resultType="msmerchant">
+		select * from SpikeMerchant where merchantaccount = #{value}
+	</select>
 </mapper>

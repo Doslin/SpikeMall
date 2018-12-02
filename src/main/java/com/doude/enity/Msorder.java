@@ -8,19 +8,19 @@ import java.util.Date;
  *
  */
 public class Msorder {
-	private int id;//����
+	private int id;//
 	private int productid;//商品id
-	private int payamount;//֧�����
+	private int payamount;//支付金额
 	private int userid;//用户id
 	private int merchantid;//商家id
 	private Date createtime;//订单创建时间
 	private Date paytime;//订单支付时间
-	private int paystatus;//支付状态
+	private int paystatus;//支付状态  1. 未支付  2. 已支付  3. 退款成功
 	private String receivingadress;//收货地址
-	private String receivingname;//�ջ�������
-	private String receivingphone;//�ջ��˵绰
-	private String tradeserialnumber;//������ˮ��
-	private int num;//����
+	private String receivingname;//收获人姓名
+	private String receivingphone;//收货人联系方式
+	private String tradeserialnumber;//流水号
+	private int num;//
 	private int paytype;//1����֧����  2����΢��  3��������
 	
 	public int getId() {

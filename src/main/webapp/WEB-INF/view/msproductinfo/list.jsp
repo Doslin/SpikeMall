@@ -18,7 +18,7 @@
 		<td>商家id</td>
 		<td>秒杀原价</td>
 		<td>申请时间</td>
-		<td>转态</td>
+		<td>状态</td>
 		<td>秒杀开始时间</td>
 		<td>秒杀结束时间</td>
 		<td>秒杀商品数</td>
@@ -40,9 +40,9 @@
 		<td>${item.endtime }</td>
 		<td>${item.productcount }</td>
 		<td>${item.stockcount }</td>
-		<td>${item.description }</td>productid,int merchantid
+		<td>${item.description }</td>
 		<td><a href="toupdatemsproduct?id=${item.id}">修改</a>||<a href="deletemsproductByid?id=${item.id}">删除</a>||<a href="querymsproductByid?id=${item.id}">查看</a>||<a href="toupdatemsproductstate?id=${item.id}">审核</a>
-		||<a href="/Msproject/msproductDetailAction/toinsertMsproductdetail?productid=${item.id}&&merchantid=${item.msmerchantid}">添加商品详情</a>||<a href="/Msproject/msproductDetailAction/queryMsproductdetailByid?productid=${item.id}">查看商品详情</a>||<a href="/Msproject/msproductDetailAction/toupdateMsproductdetail?productid=${item.id}">修改商品详情</a></td>
+		||<a href="../msproductDetailAction/toinsertMsproductdetail?productid=${item.id}&&merchantid=${item.msmerchantid}">添加商品详情</a>||<a href="../msproductDetailAction/queryMsproductdetailByid?productid=${item.id}">查看商品详情</a>||<a href="../msproductDetailAction/toupdateMsproductdetail?productid=${item.id}">修改商品详情</a></td>
 		</tr>
 	</c:forEach>
 </table>

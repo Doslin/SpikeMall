@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import com.doude.enity.Msuser;
 
 /**
- * �û�ע���¼
+ *
  * @author Administrator
  *
  */
@@ -50,11 +50,11 @@ public class UserregiterloginAction {
 		String password = msuser.getUserpassword();
 		Msuser msuserresult = msUserService.queryMsuserByuseraccount(account);
 		if(msuserresult == null ){
-			System.out.println("�޴��û�");
-			req.setAttribute("errorinfo", "�޴��û�");
+			System.out.println("无此用户");
+			req.setAttribute("errorinfo", "无此用户");
 		}else if(!msuserresult.getUserpassword().equals(password)){
-			System.out.println("�������");
-			req.setAttribute("errorinfo", "�������");
+			System.out.println("密码错误");
+			req.setAttribute("errorinfo", "密码错误");
 		}else{
 			HttpSession sess = req.getSession();
 			sess.setAttribute("msuser", msuserresult);
