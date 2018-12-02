@@ -15,7 +15,7 @@ public class Msorder {
 	private int merchantid;//商家id
 	private Date createtime;//订单创建时间
 	private Date paytime;//订单支付时间
-	private int paystatus;//支付状态  1. 未支付  2. 已支付  3. 退款成功
+	private int paystatus;//支付状态  1. 未支付  2. 已支付  3. 退款成功 4. 用户发起退款申请
 	private String receivingadress;//收货地址
 	private String receivingname;//收获人姓名
 	private String receivingphone;//收货人联系方式

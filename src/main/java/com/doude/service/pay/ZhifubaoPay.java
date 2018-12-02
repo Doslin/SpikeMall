@@ -1,9 +1,10 @@
 package com.doude.service.pay;
 
+import com.doude.service.pay.Ordertopay;
 import org.springframework.stereotype.Service;
 
 @Service
-public class ZhifubaoPay implements Ordertopay{
+public class ZhifubaoPay implements Ordertopay {
 
 	public int paywithorder(String tradeserialnumber, int payamount) {
 		System.out.println("支付宝支付成功");

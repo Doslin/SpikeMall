@@ -31,7 +31,11 @@
 			<td>${item.receivingname }</td>
 			<td>${item.tradeserialnumber }</td>
 			<td>${item.num }</td>int orderid,int paytype
-			<td><c:if test="${item.paystatus == 1 }"><a href="topaywithorder?id=${item.id}&&tradeserialnumber=${item.tradeserialnumber}&&payamount=${item.payamount}">继续支付</a></c:if><c:if test="${item.paystatus == 2 }">支付完成<input type="button" value="发起退款" onclick="applyrefund('${item.id}','${item.paytype}')"></c:if><c:if test="${item.paystatus == 3 }">退款成功</c:if><c:if test="${item.paystatus == 4 }">退款申请中</c:if><c:if test="${item.paystatus == 5 }">退款申请不成功</c:if></td>
+			<td>
+				<c:if test="${item.paystatus == 1 }"><a href="topaywithorder?id=${item.id}&&tradeserialnumber=${item.tradeserialnumber}&&payamount=${item.payamount}">继续支付</a></c:if>
+				<c:if test="${item.paystatus == 2 }">支付完成<input type="button" value="发起退款" onclick="applyrefund('${item.id}','${item.paytype}')"></c:if>
+				<c:if test="${item.paystatus == 3 }">退款成功</c:if><c:if test="${item.paystatus == 4 }">退款申请中</c:if>
+				<c:if test="${item.paystatus == 5 }">退款申请不成功</c:if></td>
 		</tr>
 	</c:forEach>
 </table>

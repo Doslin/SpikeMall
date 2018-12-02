@@ -1,10 +1,13 @@
 package com.doude.service.pay;
 
+import org.springframework.stereotype.Service;
+
 /**
  *
  * @author Administrator
  *
  */
+@Service
 public interface Ordertopay {
 	
 	/**
