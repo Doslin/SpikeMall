@@ -7,7 +7,7 @@
 ### v1.0
     单独的项目
 
-### v2.0 [现在点击此链接，可实现页间跳转](http://blog.csdn.net/thither_shore/article/details/52185758/#Inter-Page)
+### v2.0 (https://github.com/Doslin/SpikeSystem)
     分布式项目
     1. 高并发
     2. 高可用
